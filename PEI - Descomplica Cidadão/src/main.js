@@ -79,3 +79,8 @@ function generateDocument(e) {
   a.click();
   URL.revokeObjectURL(url);
 }
+
+// Reload map when the city changes
+document
+  .getElementById("city")
+  .addEventListener("input", updateMap);
