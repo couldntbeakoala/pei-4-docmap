@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Descomplica Cidadão - Page de Documentos</title>
+        <link rel="stylesheet" href="../src/styles.css" type="text/css" />
+    </head>
+    <body>
+        <!-- Shadow DOM para barra de navegação -->
+        <nav id="navbar-container"></nav>
+
+        <main id="main">
+            <section class="page">
+                <h2>Page de Documentos Jurídicos</h2>
+                <p>Escolha o tipo de documento que deseja gerar:</p>
+                <div class="cards-container">
+                    <div class="card" onclick="openForm('power-of-attorney')">
+                        Procuração
+                    </div>
+                    <div class="card" onclick="openForm('service-contract')">
+                        Contrato de Prestação de Serviço
+                    </div>
+                    <div class="card" onclick="openForm('simple-declaration')">
+                        Declaração Simples
+                    </div>
+                </div>
+                <div id="example" aria-live="polite"></div>
+            </section>
+        </main>
+
+        <!-- Shadow DOM para rodapé -->
+        <footer id="footer-container"></footer>
+
+        <script src="../src/script.js" defer></script>
+    </body>
+</html>

@@ -1,0 +1,225 @@
+/* Variáveis para tema claro e escuro usando light-dark */
+:root {
+    color-scheme: light dark;
+
+    --primary-color: light-dark(#1e90ff, #559eff); /* azul */
+    --secondary-color: light-dark(#32cd32, #60e060); /* verde */
+    --highlight-color: light-dark(#ffdd57, #ffe87c); /* amarelo */
+    --background-color: light-dark(#ffffff, #1e1e1e);
+    --text-color: light-dark(#000000, #ffffff);
+    --components-color: light-dark(#f2f2f2, #2a2a2a);
+    --shadow: 0 4px 6px light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+}
+
+nav,
+footer {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+
+    a {
+        text-decoration: none;
+        margin-left: 1rem;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.home {
+    margin-bottom: 1.5rem;
+}
+
+main {
+    position: relative;
+    padding: 6rem 1rem 2rem 1rem;
+    max-width: 960px;
+    margin: auto auto 3rem auto;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.features-list li {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: light-dark(rgba(26, 79, 139, 0.05), rgba(65, 102, 142, 0.2));
+    border-radius: 8px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: light-dark(
+        rgba(26, 79, 139, 0.05),
+        rgba(65, 102, 142, 0.6)
+    );
+    border-radius: 8px;
+}
+
+.card {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem 0;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.goto-page {
+    display: inline-block;
+    background-color: var(--highlight-color);
+    color: light-dark(#000, #111);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: var(--shadow);
+}
+
+.page {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px light-dark(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.3));
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.page h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.page p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+select,
+input,
+textarea,
+button {
+    display: block;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid light-dark(#ccc, #666);
+    background-color: var(--components-color);
+    color: var(--text-color);
+}
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+
+    > input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: light-dark(#ccc, #444);
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--background-color);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--secondary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+#mapFrame {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: var(--shadow);
+}
+
+#example {
+    margin-top: 2rem;
+}

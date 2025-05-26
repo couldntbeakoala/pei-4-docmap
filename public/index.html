@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Descomplica Cidadão - Página Inicial</title>
+        <link rel="stylesheet" href="../src/styles.css" type="text/css" />
+        <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&libraries=places"></script>
+    </head>
+    <body>
+        <!-- Shadow DOM para barra de navegação -->
+        <nav id="navbar-container"></nav>
+
+        <main id="main-content">
+            <h1>Bem-vindo ao Descomplica Cidadão!</h1>
+            <section class="home">
+                <h2>Procure sobre documentos jurídicos de maneira fácil!</h2>
+                <p>
+                    Com esta ferramente, você pode visualizar rapidamente
+                    documentos jurídicos importantes. Se precisar de
+                    aconselhamento jurídico, você pode ativar a função de
+                    <i>localização</i> na página logo abaixo e utilizar o mapa
+                    integrado para encontrar instituições jurídicas próximo da
+                    região escolhida!
+                </p>
+                <ul class="features-list">
+                    <li>🔒 100% processamento local</li>
+                    <li>📄 Modelos profissionais</li>
+                    <li>
+                        📍 Integração com Google Maps para instituições locais
+                    </li>
+                </ul>
+
+                <div class="toggle-switch">
+                    <span>Instituições jurídicas próximas.</span>
+                    <label class="switch">
+                        <input
+                            type="checkbox"
+                            id="locationToggle"
+                            onchange="toggleLocation()"
+                        />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="locationSection">
+                    <label for="city">Escolha sua cidade no ES:</label>
+                    <select id="city">
+                        <option value="Select" disabled selected>
+                            Selecione...
+                        </option>
+                    </select>
+                    <div id="mapContainer">
+                        <iframe
+                            id="mapFrame"
+                            loading="lazy"
+                            allowfullscreen
+                            referrerpolicy="no-referrer-when-downgrade"
+                            src=""
+                        >
+                        </iframe>
+                    </div>
+                </div>
+
+                <a href="page.html" class="goto-page">Escolha seu Documento</a>
+            </section>
+        </main>
+
+        <!-- Shadow DOM para rodapé -->
+        <footer id="footer-container"></footer>
+
+        <script src="../src/script.js" defer></script>
+    </body>
+</html>
