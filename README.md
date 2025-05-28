@@ -9,6 +9,6 @@ O projeto visa auxiliar o usuário na preparação para com documentos jurídico
 ## A ser feito ou em desenvolvimento:
 
 - Página de localidades úteis (em desenvolvimento):
-- - Seções para cada cidade — com as localidades jurídicas destas —, filtragem de cidade, talvez, ao clicar na seção de tão cidade, um mapa embutido para tal localização específica.
+  - Seções para cada cidade — com as localidades jurídicas destas —, filtragem de cidade, talvez, ao clicar na seção de tão cidade, um mapa embutido para tal localização específica.
 - Modelos dos documentos em si (presente em `script.js`):
-- - Pensando em trocar esses modelos, ao invés de serem carregador via JavaScript da forma como estão, serem carregados de outra forma (talvez `.json`).
+  - Pensando em trocar esses modelos, ao invés de serem carregador via JavaScript da forma como estão, serem carregados de outra forma (talvez `.json`).
