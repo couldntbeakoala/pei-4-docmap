@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Localidades Úteis</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="../src/styles.css" type="text/css" />
+  <script src="../src/locations.js" defer></script>
+</head>
+<body>
+    <!-- Shadow DOM para barra de navegação -->
+    <nav id="navbar-container"></nav>
+    <main id="main">
+        <section class="locations-container" id="locations-container">
+            <h2>Localidades Úteis</h2>
+            <p>Aqui você encontra a localização de locais que podem ser úteis para você.</p>
+            <label for="city-filter">Filtrar por cidade:</label>
+            <br/>
+            <select id="city-filter" onchange="cityFilter()">
+              <option value="All">Todas</option>
+              <option value="Vitoria">Vitória</option>
+              <option value="Vila_Velha">Vila Velha</option>
+              <option value="Cariacica">Cariacica</option>
+              <option value="Serra">Serra</option>
+            </select>
+
+            <div class="locations-content" id="locations-content"></div>
+        </section>
+
+        <script src="../src/main.js" defer></script>
+</body>
+</html>
