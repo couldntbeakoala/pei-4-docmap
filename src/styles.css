@@ -2,12 +2,12 @@
 :root {
     color-scheme: light dark;
 
-    --primary-color: light-dark(#1e90ff, #559eff); /* azul */
-    --secondary-color: light-dark(#32cd32, #60e060); /* verde */
-    --highlight-color: light-dark(#ffdd57, #ffe87c); /* amarelo */
-    --background-color: light-dark(#ffffff, #1e1e1e);
+    --primary-color: light-dark(#34bf2d, #157713); /* verde */
+    --secondary-color: light-dark(#0b7df0, #102869); /* azul */
+    --highlight-color: light-dark(#fad647, #fdab00); /* amarelo */
+    --background-color: light-dark(rgb(255, 255, 255, 0.90), rgb(13, 21, 34, 0.7));
     --text-color: light-dark(#000000, #ffffff);
-    --components-color: light-dark(#f2f2f2, #2a2a2a);
+    --components-color: light-dark(#f2f2f2, #1f2d36);
     --shadow: 0 4px 6px light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
 }
 
@@ -18,27 +18,31 @@
 
 body {
     margin: 0;
-    background-color: var(--background-color);
+    background: linear-gradient(9deg,rgba(13, 117, 158, 0.84) 0%, rgba(17, 184, 86, 0.83) 50%, rgba(207, 163, 21, 0.86) 100%
+      ), no-repeat;
     color: var(--text-color);
     transition:
         background-color 0.3s,
         color 0.3s;
+    background-attachment: fixed;
+}
+
+#navbar-container,
+#footer-container {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 
 nav,
 footer {
     width: 100%;
-    background-color: var(--primary-color);
-    color: white;
-    box-shadow: var(--shadow);
+    background-color: var(--components-color);
+    color: light-dark(#043927, #4CBB17);
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
     position: fixed;
     top: 0;
-    z-index: 1000;
+    z-index: 99;
     padding: 0.5rem 1rem;
     font-weight: bold;
 
@@ -58,17 +62,36 @@ footer {
 }
 
 .home {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-radius: 12px;
 }
 
 main {
     position: relative;
-    padding: 6rem 1rem 2rem 1rem;
+    margin: 6rem auto 5rem auto;
+    padding: 1rem 2rem;
     max-width: 960px;
-    margin: auto auto 3rem auto;
+    width: 80%;
+    background-color: var(--background-color);
+    box-shadow: var(--shadow);
+    box-sizing: border-box;
+    border-radius: 12px;
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
 }
 
 .features-list {
+    text-align: center;
     list-style: none;
     padding: 0;
     margin-bottom: 2rem;
@@ -79,6 +102,11 @@ main {
     padding: 1rem;
     background: light-dark(rgba(26, 79, 139, 0.05), rgba(65, 102, 142, 0.2));
     border-radius: 8px;
+}
+
+.button-container {
+    text-align: center;
+    margin-bottom: 2rem
 }
 
 .cards-container {
@@ -102,14 +130,14 @@ main {
     text-align: center;
     cursor: pointer;
     box-shadow: var(--shadow);
-    transition: transform 0.2s;
+    transition: transform 0.2s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
 }
 
-.goto-page {
+.goto {
     display: inline-block;
     background-color: var(--highlight-color);
     color: light-dark(#000, #111);
@@ -120,7 +148,7 @@ main {
     box-shadow: var(--shadow);
 }
 
-.page {
+.models {
     max-width: 900px;
     margin: 2rem auto;
     padding: 2rem;
@@ -133,30 +161,26 @@ main {
         color 0.3s ease;
 }
 
-.page h2 {
+.models h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: light-dark(var(--primary-color), var(--highlight-color));
 }
 
-.page p {
+.models p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
 }
 
-select,
-input,
-textarea,
-button {
+select {
     display: block;
     margin: 1rem 0;
     padding: 0.5rem;
     font-size: 1rem;
     width: 100%;
     border-radius: 5px;
-    border: 1px solid light-dark(#ccc, #666);
+    border: 1px solid light-dark(var(--secondary-color), var(--highlight-color));;   
     background-color: var(--components-color);
-    color: var(--text-color);
 }
 
 .toggle-switch {
@@ -186,7 +210,7 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: light-dark(#ccc, #444);
+    background-color: var(--highlight-color);
     transition: 0.4s;
     border-radius: 34px;
 }
@@ -204,14 +228,14 @@ button {
 }
 
 input:checked + .slider {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 input:checked + .slider:before {
     transform: translateX(26px);
 }
 
-#mapFrame {
+#mapIframe {
     width: 100%;
     height: 300px;
     border: 0;
