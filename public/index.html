@@ -27,33 +27,11 @@
                     📍 Integração com Google Maps para instituições locais
                 </li>
             </ul>
+            <p>
+                Caso necessite de algum serviço, acesse a página de localidades úteis e veja os serviços disponíveis na sua cidade.
+            </p>
             <div class="button-container">
                 <a href="/public/models.html" class="goto">Escolha seu Documento</a>
-            </div>
-            <p>
-                Caso necessite de algum serviço, acesse a página de locais úteis e veja os serviços disponíveis na sua cidade. Você também pode ativar a <b>função de localização</b> abaixo, selecionar uma cidade e utilizar o mapa integrado para encontrar instituições próximas à sua região!
-            </p>
-
-            <div class="toggle-switch">
-                <span>Função de localização:</span>
-                <label class="switch">
-                    <input type="checkbox" id="locationToggle" onchange="toggleLocation()" />
-                    <span class="slider"></span>
-                </label>
-            </div>
-
-            <div class="locationSection">
-                <label for="city">Escolha sua cidade no ES:</label>
-                <select id="city">
-                    <option value="Select" disabled selected>
-                        Selecione...
-                    </option>
-                </select>
-                <div id="mapContainer">
-                    <iframe id="mapIframe" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
-                        src="">
-                    </iframe>
-                </div>
             </div>
         </section>
     </main>
@@ -62,7 +40,6 @@
     <footer id="footer-container"></footer>
 
     <script src="../src/main.js" defer></script>
-    <script src="../src/index.js" defer></script>
 </body>
 
 </html>
