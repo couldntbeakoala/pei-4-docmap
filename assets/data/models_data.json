@@ -1,0 +1,58 @@
+{
+  "minute": {
+    "title": "Ata",
+    "description": "Modelos de atas para reuniões diversas.",
+    "documents": [
+      "ATA DE REUNIÃO DE ASSEMBLEIA.docx"
+    ]
+  },
+  "power-of-attorney": {
+    "title": "Procuração",
+    "description": "Modelos de procuração para diferentes finalidades.",
+    "documents": [
+      "PROCURAÇÃO SIMPLES.docx"
+    ]
+  },
+  "contract": {
+    "title": "Contrato",
+    "description": "Modelos para contratos diversos.",
+    "documents": [
+      "CONTRATO DE PRESTAÇÃO DE SERVIÇOS AUTÔNOMOS.docx",
+      "CONTRATO DE LOCAÇÃO DE IMÓVEL RESIDENCIAL.docx",
+      "CONTRATO DE COMPRA E VENDA DE VEÍCULO USADO.docx"
+    ]
+  },
+  "declaration": {
+    "title": "Declaração",
+    "description": "Modelos de declaração para variados contextos.",
+    "documents": [
+      "DECLARAÇÃO DE EXPERIÊNCIA PROFISSIONAL.docx",
+      "DECLARAÇÃO DE PRÓPRIO PUNHO.docx",
+      "DECLARAÇÃO DE RENDA.docx",
+      "DECLARAÇÃO DE RESIDÊNCIA.docx",
+      "DECLARAÇÃO DE TRABALHO INFORMAL.docx"
+    ]
+  },
+  "authorization": {
+    "title": "Autorização",
+    "description": "Modelos de autorização para diversas situações.",
+    "documents": [
+      "AUTORIZAÇÃO PARA TERCEIROS BUSCAREM CRIANÇA NA ESCOLA.docx",
+      "AUTORIZAÇÃO PARA VIAGEM DE MENOR.docx"
+    ]
+  },
+  "term": {
+    "title": "Termo",
+    "description": "Modelos de termos para diferentes situações.",
+    "documents": [
+      "TERMO DE RESPONSABILIDADE.docx"
+    ]
+  },
+  "other": {
+    "title": "Outros",
+    "description": "Modelos diversos que não se encaixam nas outras categorias.",
+    "documents": [
+      "CURRÍCULO SIMPLES.docx"
+    ]
+  }
+}

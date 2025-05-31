@@ -1,0 +1,47 @@
+{
+  "Vitoria": {
+    "name": "Vitória",
+    "locals": [
+      {
+        "title": "Prefeitura de Vitória",
+        "link": "https://www.google.com/maps/place/Prefeitura+Municipal+de+Vitória/",
+        "description": "Serviços administrativos e atendimento ao cidadão para questões municipais como tributos, transporte e urbanismo."
+      },
+      {
+        "title": "Fórum de Vitória",
+        "link": "https://www.google.com/maps/place/Fórum+de+Vitória+ES/",
+        "description": "Órgão do Poder Judiciário responsável pelo trâmite de processos e realização de audiências da capital."
+      }
+    ]
+  },
+  "Vila_Velha": {
+    "name": "Vila Velha",
+    "locals": [
+      {
+        "title": "Prefeitura de Vila Velha",
+        "link": "https://www.google.com/maps/place/Prefeitura+Municipal+de+Vila+Velha/",
+        "description": "Administração municipal de Vila Velha."
+      }
+    ]
+  },
+  "Cariacica": {
+    "name": "Cariacica",
+    "locals": [
+      {
+        "title": "Prefeitura de Cariacica",
+        "link": "https://www.google.com/maps/place/Prefeitura+Municipal+de+Cariacica/",
+        "description": "Gestão municipal de Cariacica."
+      }
+    ]
+  },
+  "Serra": {
+    "name": "Serra",
+    "locals": [
+      {
+        "title": "Prefeitura de Serra",
+        "link": "https://www.google.com/maps/place/Prefeitura+Municipal+de+Serra/",
+        "description": "Administração municipal de Serra."
+      }
+    ]
+  }
+}
