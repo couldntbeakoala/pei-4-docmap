@@ -15,16 +15,28 @@
         <main id="main">
             <section class="models">
                 <h2>Modelos de Documentos Jurídicos</h2>
-                <p>Escolha o tipo de documento que deseja gerar:</p>
+                <p>Escolha o tipo que deseja:</p>
                 <div class="cards-container">
-                    <div class="card" onclick="openForm('power-of-attorney')">
+                    <div class="card" data-type="minute">
+                        Ata
+                    </div>
+                    <div class="card" data-type="power-of-attorney">
                         Procuração
                     </div>
-                    <div class="card" onclick="openForm('service-contract')">
-                        Contrato de Prestação de Serviço
+                    <div class="card" data-type="contract">
+                        Contrato
                     </div>
-                    <div class="card" onclick="openForm('simple-declaration')">
-                        Declaração Simples
+                    <div class="card" data-type="declaration">
+                        Declaração
+                    </div>
+                    <div class="card" data-type="authorization">
+                        Autorização
+                    </div>
+                    <div class="card" data-type="term">
+                        Termo
+                    </div>
+                    <div class="card" data-type="other">
+                        Outros
                     </div>
                 </div>
                 <div id="example" aria-live="polite"></div>
