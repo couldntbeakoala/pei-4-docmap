@@ -7,7 +7,6 @@
   <title>Localidades Úteis</title>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="stylesheet" href="../src/styles.css" type="text/css" />
-  <script src="../src/locations.js" defer></script>
 </head>
 <body>
     <!-- Shadow DOM para barra de navegação -->
@@ -18,17 +17,14 @@
             <p>Aqui você encontra a localização de locais que podem ser úteis para você.</p>
             <label for="city-filter">Filtrar por cidade:</label>
             <br/>
-            <select id="city-filter" onchange="cityFilter()">
+            <select id="city-filter">
               <option value="All">Todas</option>
-              <option value="Vitoria">Vitória</option>
-              <option value="Vila_Velha">Vila Velha</option>
-              <option value="Cariacica">Cariacica</option>
-              <option value="Serra">Serra</option>
             </select>
 
             <div class="locations-content" id="locations-content"></div>
         </section>
 
         <script src="../src/main.js" defer></script>
+        <script src="../src/locations.js" defer></script>
 </body>
 </html>
