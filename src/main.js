@@ -30,7 +30,7 @@ navShadow.innerHTML = `
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: var(--components-color);
+      background-color: light-dark(rgb(138, 221, 173), var(--components-color));
       color: light-dark(#043927, #4CBB17);
       > img {
         display: inline-block;
