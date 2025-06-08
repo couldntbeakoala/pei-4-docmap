@@ -40,7 +40,7 @@ body {
 nav,
 footer {
   width: 100%;
-  background-color: var(--components-color);
+  background-color: light-dark(rgb(138, 221, 173), var(--components-color));
   color: light-dark(#043927, #4CBB17);
 }
 
